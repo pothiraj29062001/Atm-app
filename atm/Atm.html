@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATM Machine</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: url('https://st2.depositphotos.com/2673929/10732/i/450/depositphotos_107325908-stock-photo-atm-machine-concrete-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #container {
+        background-color: rgba(0, 0, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 8px white;
+        text-align: center;
+    }
+
+    .tick-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    .btn {
+        padding: 10px;
+        background-color: blue;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    input {
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: none;
+        width: calc(100% - 22px);
+    }
+
+    #submitBtn, #restartBtn {
+        padding: 10px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    #submitBtn {
+        background-color: #0000ff;
+    }
+
+    #restartBtn {
+        background-color: red;
+        display: none;
+    }
+
+    h2 {
+        color: white;
+    }
+</style>
+</head>
+<body>
+
+<div id="container">
+    <h2>ATM Machine</h2>
+    <p>Enter your account number and password:</p>
+    <form>
+        Account Number: <input type="text" id="accountNumber"><br>
+        Password: <input type="password" id="password"><br>
+        <button type="button" id="submitBtn" onclick="atm()">Submit</button>
+        <button type="button" id="correctBtn" class="tick-btn" style="display: none;" onclick="resetForm()">OK</button>
+    </form>
+    <div id="message"></div>
+    <button id="restartBtn" onclick="restartPage()">Restart</button>
+</div>
+
+<script src="atm.js"></script>
+
+</body>
+</html>
+
+
